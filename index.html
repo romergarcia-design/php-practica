@@ -5,29 +5,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - Turismo Santivañez</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eeeeee;
+            padding: 30px 15px;
+        }
+
+        main {
+            max-width: 600px;
+            margin: auto;
+            padding: 30px;
+            background: #f0fff4;
+            border-radius: 15px;
+        }
+
+        h1, h2 {
+            color: #176b38;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-top: 5px;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 20px;
+            padding: 12px;
+            background: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
+    <main>
+        <h1>Turismo Santivañez</h1>
+        <h2>Contacto</h2>
+        <p>Escríbenos un mensaje para conocer más sobre nuestros atractivos turísticos.</p>
 
-    <h1>Turismo Santivañez</h1>
-    <h2>Formulario de contacto</h2>
+        <form action="procesar.php" method="POST">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
 
-    <form action="procesar.php" method="POST">
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
 
-        <label for="nombre">Nombre:</label><br>
-        <input type="text" id="nombre" name="nombre" required>
-        <br><br>
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
 
-        <label for="correo">Correo electrónico:</label><br>
-        <input type="email" id="correo" name="correo" required>
-        <br><br>
-
-        <label for="mensaje">Mensaje:</label><br>
-        <textarea id="mensaje" name="mensaje" required></textarea>
-        <br><br>
-
-        <button type="submit">Enviar mensaje</button>
-
-    </form>
-
+            <button type="submit">Enviar mensaje</button>
+        </form>
+    </main>
 </body>
 </html>
